@@ -1,0 +1,30 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  font-family: "Courier Prime", monospace;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  background-color: #ffffff;
+  box-shadow: 1.6rem 0.71rem 2rem 0rem #dbdbdb;
+  border-radius: 0.35rem;
+  border: solid 4px #999999;
+  text-align: center;
+}
+
+.inner {
+  border-radius: calc(0.5rem - 4px);
+  max-width: 100%;
+  position: relative;
+  width: 60rem;
+  padding: 2rem 3rem;
+}
