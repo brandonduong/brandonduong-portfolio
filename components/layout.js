@@ -5,19 +5,21 @@ export default function Layout({ children }) {
     typography: {
       fontFamily: `"Courier Prime", monospace`,
     },
-    container: {
-      minHeight: "100vh",
-      padding: "2rem",
-      display: "flex",
-      alignItems: "center",
-      flexDirection: "column",
-      justifyContent: "center",
-      overflow: "hidden",
-    },
   });
 
   return (
-    <Container className={styles.container}>
+    <Container
+      className={styles.container}
+      sx={{
+        minHeight: "100vh",
+        padding: "2rem",
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        justifyContent: "center",
+        overflow: "hidden",
+      }}
+    >
       <ThemeProvider theme={theme}>
         <div className={styles.main}>
           <div className={styles.inner}>{children}</div>
