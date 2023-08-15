@@ -5,6 +5,15 @@ export default function Layout({ children }) {
     typography: {
       fontFamily: `"Courier Prime", monospace`,
     },
+    container: {
+      minHeight: "100vh",
+      padding: "2rem",
+      display: "flex",
+      alignItems: "center",
+      flexDirection: "column",
+      justifyContent: "center",
+      overflow: "hidden",
+    },
   });
 
   return (
@@ -16,15 +25,7 @@ export default function Layout({ children }) {
       </ThemeProvider>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 2rem;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
-          overflow: hidden;
-          font-family: "Courier Prime", monospace;
+        main {
         }
       `}</style>
       <style jsx global>{`
