@@ -16,7 +16,15 @@ export default function Layout({ children }) {
       </ThemeProvider>
 
       <style jsx>{`
-        main {
+        .container {
+          min-height: 100vh;
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          overflow: hidden;
+          font-family: "Courier Prime", monospace;
         }
       `}</style>
       <style jsx global>{`
