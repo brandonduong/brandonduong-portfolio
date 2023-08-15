@@ -1,7 +1,18 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
-import { Divider, Grid, Stack, Typography } from "@mui/material";
+import {
+  Button,
+  Divider,
+  Grid,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
+import DescriptionIcon from "@mui/icons-material/Description";
+import { Email, GitHub, LinkedIn } from "@mui/icons-material";
+import ListItems from "../components/ListItems";
+import CustomTextDivider from "../components/CustomTextDivider";
 
 export default function Home() {
   const demographicInfo = {
@@ -16,29 +27,57 @@ export default function Home() {
   const skillsInfo = {
     "Programming Languages":
       "Python, Java, JavaScript, TypeScript, Kotlin, HTML5, CSS3, SQL, C#, C, R, Go",
-    "Frameworks and Libraries":
+    "Frameworks & Libraries":
       "AWS (Amplify, AppSync, Lambda, Cognito, API Gateway), GraphQL, Azure, React.js, Vue.js, Node.js, Express, Redux, Django, Bootstrap, Git/Github, Docker, JUnit, Pytest, Cypress",
     Databases: "Firebase, SQLite3, MySQL, Redis, MongoDB",
   };
 
-  function listItems(infoObj) {
-    return Object.entries(infoObj).map(([row, info]) => {
-      return (
-        <>
-          <Grid item md={4}>
-            <Typography variant="p" className={styles.demograpicInfo}>
-              <strong>{row}</strong>
-            </Typography>
-          </Grid>
-          <Grid item md={8}>
-            <Typography variant="p" className={styles.demograpicInfo}>
-              {info}
-            </Typography>
-          </Grid>
-        </>
-      );
-    });
-  }
+  const linkButtonsInfo = {
+    RESUME: {
+      link: "Brandon_Duong_Resume.pdf",
+      icon: <DescriptionIcon className={styles.buttonIcon} />,
+    },
+    GITHUB: {
+      link: "https://github.com/brandonduong",
+      icon: <GitHub className={styles.buttonIcon} />,
+    },
+    LINKEDIN: {
+      link: "https://www.linkedin.com/in/branduong/",
+      icon: <LinkedIn className={styles.buttonIcon} />,
+    },
+    EMAIL: {
+      link: "mailto: brandon.duong@outlook.com",
+      icon: <Email className={styles.buttonIcon} />,
+    },
+  };
+
+  const linkButtons = (
+    <>
+      {Object.entries(linkButtonsInfo).map(([text, info]) => {
+        return (
+          <>
+            <Grid item xs={6} sm={3} md={3}>
+              <Button
+                variant="contained"
+                color="black"
+                sx={{
+                  fontSize: "0.95rem",
+                  alignItems: "start",
+                  borderRadius: "0.75rem",
+                  width: "100%",
+                }}
+                href={info.link}
+                target="_blank"
+              >
+                {info.icon}
+                {text}
+              </Button>
+            </Grid>
+          </>
+        );
+      })}
+    </>
+  );
 
   return (
     <Layout>
@@ -67,7 +106,7 @@ export default function Home() {
         direction={"row"}
         justifyContent={"space-around"}
       >
-        <p>Employee ID: 511920518</p>
+        <p>Employee ID: 10114520 </p>
         <p>Position Title: Software Engineer / Developer</p>
         <p className={styles.classified}>
           <strong>CLASSIFIED</strong>
@@ -80,10 +119,11 @@ export default function Home() {
           <Divider
             sx={{
               borderBottomWidth: 3,
-              borderColor: "black",
-              marginBottom: "1.75rem",
+              borderColor: "#000000",
+              marginBottom: "0.875rem",
             }}
           />
+
           <img alt="me" src="/me.jpg" className={styles.me} />
         </Grid>
         <Grid item md={6}>
@@ -91,33 +131,40 @@ export default function Home() {
           <Divider
             sx={{
               borderBottomWidth: 3,
-              borderColor: "black",
-              marginBottom: "1.75rem",
+              borderColor: "#000000",
+              marginBottom: "0.875rem",
             }}
           />
           <Grid container textAlign={"start"} rowSpacing={1}>
-            {listItems(demographicInfo)}
+            <ListItems infoObj={demographicInfo} />
           </Grid>
           <Divider
             sx={{
               borderBottomWidth: 1,
               borderStyle: "dashed",
-              borderColor: "black",
+              borderColor: "#000000",
               margin: "0.875rem 0",
             }}
           />
           <Grid container textAlign={"start"} rowSpacing={1}>
-            {listItems(skillsInfo)}
+            <ListItems infoObj={skillsInfo} />
           </Grid>
         </Grid>
       </Grid>
+
       <Divider
         sx={{
           borderBottomWidth: 3,
-          borderColor: "black",
-          margin: "0.875rem",
+          borderColor: "#000000",
+          margin: "0.875rem 0",
         }}
       />
+
+      <Grid container columnSpacing={0.25} paddingBottom={0.5}>
+        {linkButtons}
+      </Grid>
+
+      <CustomTextDivider text={"Personal Projects"} />
     </Layout>
   );
 }

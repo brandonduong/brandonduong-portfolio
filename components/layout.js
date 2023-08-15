@@ -1,9 +1,22 @@
 import { Container, ThemeProvider, createTheme } from "@mui/material";
 import styles from "../styles/layout.module.css";
 export default function Layout({ children }) {
-  const theme = createTheme({
+  let theme = createTheme({
     typography: {
       fontFamily: `"Courier Prime", monospace`,
+    },
+  });
+
+  theme = createTheme(theme, {
+    palette: {
+      black: theme.palette.augmentColor({
+        color: {
+          main: "#111111",
+          dark: "#000000",
+          contrastText: "#FFFFFF",
+        },
+        name: "black",
+      }),
     },
   });
 
