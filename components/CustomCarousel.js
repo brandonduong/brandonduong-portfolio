@@ -56,21 +56,30 @@ export default function CustomCarousel({
                 Your browser does not support the video tag.
               </video>
             ) : (
-              <img
-                src={`/${category}/${project}/${project}${index + 1}.png`}
-                class={styles.centerCropped}
-              />
+              <a
+                style={{ display: "flex" }}
+                target="_blank"
+                href={`/${category}/${project}/${project}${index + 1}.png`}
+              >
+                <img
+                  src={`/${category}/${project}/${project}${index + 1}.png`}
+                  class={styles.centerCropped}
+                />
+              </a>
             )}
           </div>
         ))}
-        {dots}
-
-        <a class={styles.prev} onClick={handlePrev}>
-          <ChevronLeft className={styles.chevron} />
-        </a>
-        <a class={styles.next} onClick={handleNext}>
-          <ChevronRight className={styles.chevron} />
-        </a>
+        {info.description.length > 1 && (
+          <>
+            {dots}
+            <a class={styles.prev} onClick={handlePrev}>
+              <ChevronLeft className={styles.chevron} />
+            </a>
+            <a class={styles.next} onClick={handleNext}>
+              <ChevronRight className={styles.chevron} />
+            </a>
+          </>
+        )}
       </div>
     </>
   );

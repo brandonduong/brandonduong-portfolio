@@ -1,4 +1,40 @@
 export const personalProjectInfo = {
+  recursion: {
+    title: "BRANDONDUONG.VERCEL.APP",
+    descriptionTitles: ["Fully Responsive and Beautifully Themed Portfolio"],
+    description: [
+      "My updated portfolio website that shows off me and my proud works nicely to hopefully land me a nice job so that I can support the people that are close to me!",
+    ],
+    tech: "Javascript (React - Next.js), HTML, CSS",
+    link: "https://github.com/brandonduong/brandonduong-portfolio",
+    year: "2023",
+  },
+  lolguess: {
+    title: "LOLGUESS",
+    descriptionTitles: [
+      "Practice Tool for Popular Game Teamfight Tactics",
+      "Play: Choose Region",
+      "Play: Choose Rank",
+      "Play: Guess Placements",
+      "Play: Receive Feedback",
+      "Track Progress and Learnings",
+      "Compete on the Leaderboard",
+      "Supporters Page",
+    ],
+    description: [
+      "By using this tool, competitive and casual players can train and test their overall game knowledge to improve their ingame play.",
+      "Users first choose a set of regions (NA, KR, JP, EU, etc.) to receive a random match from.",
+      "Users then choose a set of ranks (Iron, Silver, Gold, Masters, Grandmasters, Challengers, etc.) to receive a random match from.",
+      "Users then receive said random match from the possible regions and ranks. Given each player's end-game team composition, users must guess their placings from first to eighth and the overall match rank.",
+      "After submitting their answer, users receive a score and feedback correspoing to how well they guessed the placings and rank within the game lobby.",
+      "A user's guesses are stored and can be viewed on their profile, along with their all-time stats and graphs.",
+      "Every day at 8pm EST the leaderboard updates, sortable by total score, correct placements, correct ranks, average score, or average correct placements.",
+      "Anybody willing to generously support the practice tool is given their own section on the supporters page!",
+    ],
+    tech: "Typescript (Vue3), HTML, CSS, AWS (Amplify, AppSync, API Gateway, Lambda, Cognito, Route 53)",
+    link: "https://github.com/brandonduong/LoLGuess",
+    year: "2023",
+  },
   prettypets: {
     title: "PRETTY PETS",
     picTypes: [".png", ".png", ".mp4", ".png", ".mp4"],
