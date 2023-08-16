@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import styles from "../styles/Home.module.css";
 import CustomCarousel from "./CustomCarousel";
 import { useState } from "react";
-export default function Project({ project, info }) {
+export default function Project({ project, info, category }) {
   const [slide, setSlide] = useState(0);
 
   return (
@@ -13,6 +13,7 @@ export default function Project({ project, info }) {
           info={info}
           slide={slide}
           setSlide={setSlide}
+          category={category}
         />
       </Grid>
       <Grid item sm={6} md={8} textAlign={"start"}>

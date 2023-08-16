@@ -2,7 +2,13 @@ import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Typography } from "@mui/material";
-export default function CustomCarousel({ project, info, slide, setSlide }) {
+export default function CustomCarousel({
+  project,
+  info,
+  slide,
+  setSlide,
+  category,
+}) {
   function handleNext() {
     if (slide < info.description.length - 1) {
       setSlide(slide + 1);
@@ -42,7 +48,7 @@ export default function CustomCarousel({ project, info, slide, setSlide }) {
             {info.picTypes && info.picTypes[index] !== ".png" ? (
               <video controls class={styles.centerCropped}>
                 <source
-                  src={`/${project}/${project}${index + 1}${
+                  src={`/${category}/${project}/${project}${index + 1}${
                     info.picTypes[index]
                   }`}
                   type="video/mp4"
@@ -51,7 +57,7 @@ export default function CustomCarousel({ project, info, slide, setSlide }) {
               </video>
             ) : (
               <img
-                src={`/${project}/${project}${index + 1}.png`}
+                src={`/${category}/${project}/${project}${index + 1}.png`}
                 class={styles.centerCropped}
               />
             )}

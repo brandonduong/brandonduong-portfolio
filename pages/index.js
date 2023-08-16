@@ -168,10 +168,10 @@ export default function Home() {
         {linkButtons}
       </Grid>
       <CustomTextDivider text={"Personal Projects"} />
-      <Projects projectInfo={personalProjectInfo} />
+      <Projects projectInfo={personalProjectInfo} category="personal" />
 
       <CustomTextDivider text={"Group Projects"} />
-      <Projects projectInfo={groupProjectInfo} />
+      <Projects projectInfo={groupProjectInfo} category="group" />
     </Layout>
   );
 }

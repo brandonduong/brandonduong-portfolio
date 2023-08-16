@@ -1,13 +1,13 @@
 import { Divider } from "@mui/material";
 import Project from "./Project";
 
-export default function Projects({ projectInfo }) {
+export default function Projects({ projectInfo, category }) {
   return (
     <>
       {Object.entries(projectInfo).map(([project, info], index) => {
         return (
           <>
-            <Project project={project} info={info} />
+            <Project project={project} info={info} category={category} />
             {index < Object.entries(projectInfo).length - 1 && (
               <Divider
                 sx={{
