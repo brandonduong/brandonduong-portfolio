@@ -36,7 +36,8 @@ export default function Project({ project, info }) {
                 style={{ display: slide === index ? "" : "none" }}
               >
                 <Typography
-                  variant="h5"
+                  variant="p"
+                  gutterBottom
                   className={styles.listInfo}
                   style={{ textDecoration: "underline" }}
                 >
@@ -51,14 +52,18 @@ export default function Project({ project, info }) {
                 class={styles.fade}
                 style={{ display: slide === index ? "" : "none" }}
               >
-                <Typography variant="h6" className={styles.listInfo}>
+                <Typography
+                  variant="p"
+                  gutterBottom
+                  className={styles.listInfo}
+                >
                   {desc} ({index + 1}/{info.description.length})
                 </Typography>
               </div>
             ))}
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h6" className={styles.listInfo}>
+            <Typography variant="p" className={styles.listInfo}>
               <strong>{info.tech}</strong>
             </Typography>
           </Grid>
