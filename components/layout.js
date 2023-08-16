@@ -1,5 +1,6 @@
 import { Container, ThemeProvider, createTheme } from "@mui/material";
 import styles from "../styles/layout.module.css";
+import Head from "next/head";
 export default function Layout({ children }) {
   let theme = createTheme({
     typography: {
@@ -17,6 +18,12 @@ export default function Layout({ children }) {
         },
         name: "black",
       }),
+      classified: theme.palette.augmentColor({
+        color: {
+          main: "#a80000",
+        },
+        name: "classified",
+      }),
     },
   });
 
@@ -33,6 +40,10 @@ export default function Layout({ children }) {
         overflow: "hidden",
       }}
     >
+      <Head>
+        <title>Brandon Duong</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ThemeProvider theme={theme}>
         <div className={styles.main}>
           <div className={styles.inner}>{children}</div>

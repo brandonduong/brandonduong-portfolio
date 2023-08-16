@@ -17,6 +17,7 @@ import Project from "../components/Project";
 import { groupProjectInfo } from "../constants/groupProjectInfo";
 import { personalProjectInfo } from "../constants/personalProjectInfo";
 import Projects from "../components/Projects";
+import Link from "next/link";
 export default function Home() {
   const demographicInfo = {
     "Full Name": "Brandon Duong",
@@ -84,10 +85,6 @@ export default function Home() {
 
   return (
     <Layout>
-      <Head>
-        <title>Brandon Duong</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Stack
         className={`${styles.header}`}
         direction={"row"}
@@ -164,14 +161,49 @@ export default function Home() {
           margin: "0.875rem 0",
         }}
       />
-      <Grid container columnSpacing={0.25}>
+      <Grid container spacing={0.5}>
         {linkButtons}
-      </Grid>
-      <CustomTextDivider text={"Personal Projects"} />
-      <Projects projectInfo={personalProjectInfo} category="personal" />
 
-      <CustomTextDivider text={"Group Projects"} />
-      <Projects projectInfo={groupProjectInfo} category="group" />
+        <Grid item xs={6}>
+          <Link href="/personal">
+            <Button
+              variant="contained"
+              color="classified"
+              sx={{
+                fontSize: "0.95rem",
+                alignItems: "start",
+                borderRadius: "0.75rem",
+                width: "100%",
+              }}
+            >
+              Personal Projects
+            </Button>
+          </Link>
+        </Grid>
+        <Grid item xs={6}>
+          <Link href="/group">
+            <Button
+              variant="contained"
+              color="classified"
+              sx={{
+                fontSize: "0.95rem",
+                alignItems: "start",
+                borderRadius: "0.75rem",
+                width: "100%",
+              }}
+            >
+              Group Projects
+            </Button>
+          </Link>
+        </Grid>
+      </Grid>
+      <Divider
+        sx={{
+          borderBottomWidth: 3,
+          borderColor: "#000000",
+          margin: "0.875rem 0 0",
+        }}
+      />
     </Layout>
   );
 }
