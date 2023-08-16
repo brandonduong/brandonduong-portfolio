@@ -2,25 +2,27 @@ import { Divider, Grid, Typography } from "@mui/material";
 
 export default function CustomTextDivider({ text }) {
   return (
-    <Grid container paddingTop={0.5}>
-      <Grid item xs={3} sm={4.5}>
+    <Grid container>
+      <Grid item xs={3} sm={3.75}>
         <Divider
           sx={{
             borderBottomWidth: 3,
             borderColor: "#000000",
-            margin: "0.75rem 0",
+            margin: "1rem 0",
           }}
         />
       </Grid>
-      <Grid item xs={6} sm={3}>
-        <Typography variant="h6">{text}</Typography>
+      <Grid item xs={6} sm={4.5}>
+        <Typography variant="h4">
+          <strong>{text}</strong>
+        </Typography>
       </Grid>
-      <Grid item xs={3} sm={4.5}>
+      <Grid item xs={3} sm={3.75}>
         <Divider
           sx={{
             borderBottomWidth: 3,
             borderColor: "#000000",
-            margin: "0.75rem 0",
+            margin: "1rem 0",
           }}
         />
       </Grid>
