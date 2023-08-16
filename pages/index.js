@@ -22,7 +22,7 @@ export default function Home() {
     "Full Name": "Brandon Duong",
     Birthday: "October 14",
     Personality:
-      "Fast Learner, Team Player, Attention to Detail, Takes Initiative",
+      "Fast Learner, Team Player, Attention to Detail, Takes Initiative, Passionate",
     "Other Info":
       "Genuinely love to create and be creative, evident in the plethora of personal projects and learning endeavors I've completed!",
   };
@@ -98,7 +98,7 @@ export default function Home() {
           <strong>UPDATED:</strong> 08/15/2023
         </p>
       </Stack>
-      <Typography variant="h2" className={styles.title} gutterBottom>
+      <Typography variant="h4" className={styles.title} gutterBottom>
         Employee Profile
       </Typography>
       <Typography variant="p" className={styles.name}>

@@ -6,7 +6,7 @@ export default function Project({ project, info, category }) {
   const [slide, setSlide] = useState(0);
 
   return (
-    <Grid container columnSpacing={3} alignItems={"center"}>
+    <Grid container columnSpacing={2} alignItems={"center"}>
       <Grid item sm={6} md={4}>
         <CustomCarousel
           project={project}
