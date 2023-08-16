@@ -39,10 +39,22 @@ export default function CustomCarousel({ project, info, slide, setSlide }) {
             class={styles.fade}
             style={{ display: slide === index ? "" : "none" }}
           >
-            <img
-              src={`/${project}/${project}${index + 1}.png`}
-              class={styles.centerCropped}
-            />
+            {info.picTypes && info.picTypes[index] !== ".png" ? (
+              <video controls class={styles.centerCropped}>
+                <source
+                  src={`/${project}/${project}${index + 1}${
+                    info.picTypes[index]
+                  }`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <img
+                src={`/${project}/${project}${index + 1}.png`}
+                class={styles.centerCropped}
+              />
+            )}
           </div>
         ))}
         {dots}

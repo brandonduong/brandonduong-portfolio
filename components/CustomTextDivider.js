@@ -2,7 +2,7 @@ import { Divider, Grid, Typography } from "@mui/material";
 
 export default function CustomTextDivider({ text }) {
   return (
-    <Grid container>
+    <Grid container paddingTop={0.5}>
       <Grid item xs={3} sm={4.5}>
         <Divider
           sx={{

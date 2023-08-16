@@ -15,6 +15,8 @@ import ListItems from "../components/ListItems";
 import CustomTextDivider from "../components/CustomTextDivider";
 import Project from "../components/Project";
 import { groupProjectInfo } from "../constants/groupProjectInfo";
+import { personalProjectInfo } from "../constants/personalProjectInfo";
+import Projects from "../components/Projects";
 export default function Home() {
   const demographicInfo = {
     "Full Name": "Brandon Duong",
@@ -162,27 +164,14 @@ export default function Home() {
           margin: "0.875rem 0",
         }}
       />
-      <Grid container columnSpacing={0.25} paddingBottom={0.5}>
+      <Grid container columnSpacing={0.25}>
         {linkButtons}
       </Grid>
       <CustomTextDivider text={"Personal Projects"} />
+      <Projects projectInfo={personalProjectInfo} />
 
       <CustomTextDivider text={"Group Projects"} />
-      {Object.entries(groupProjectInfo).map(([project, info]) => {
-        return (
-          <>
-            <Project project={project} info={info} />
-            <Divider
-              sx={{
-                borderBottomWidth: 1,
-                borderStyle: "dashed",
-                borderColor: "#000000",
-                margin: "0.875rem 0",
-              }}
-            />
-          </>
-        );
-      })}
+      <Projects projectInfo={groupProjectInfo} />
     </Layout>
   );
 }

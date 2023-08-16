@@ -1,4 +1,27 @@
 export const groupProjectInfo = {
+  farming: {
+    title: "FARMING MATTERS",
+    picTypes: [".mp4", ".mp4", ".mp4", ".mp4", ".mp4", ".mp4"],
+    descriptionTitles: [
+      "Software Engineering Capstone Project",
+      "Study Question #1: Deterministic Data",
+      "Study Question #1: Probabilistic Data",
+      "Study Question #1: Consultant",
+      "Study Question #2: Risk vs Reward",
+      "Study Question #2: Insurance",
+    ],
+    description: [
+      "With McMaster Professor Dr.Yiannokoulias as our group's client and supervisor, we created a web browser game with a farming theme whose purpose is to mask a psychological study.",
+      "The psychological study investigates whether people prefer deterministic or probabilistic data. An example of this would be whether people prefer if their doctor says they are 75% confident in their diagnosis, or if they say their diagnosis is correct, but are wrong 25% of the time for both cases.",
+      "This study question is analyzed through the game mechanic of the consultant. Every player is assigned deterministic of probabilistic data upon registration. The player can pay the consultant to receive this information.",
+      "The consultant can provide information about the future turns pertaining to the weather or selling price of fully grown crops.",
+      "The psychological study also investigates how people weigh risk vs reward, along with how their perception of this changes in response to the type of data they receive. This study question is analyzed through the game mechanic of insurance.",
+      "The player can pay a small premium to insure a base selling price for their planted crops. If the consultant predicts bad weather or falling sale prices, will the study participant purchase insurance? And at what premium are they wiling to pay to ensure some base selling price?",
+    ],
+    tech: "Python (Django), HTML, CSS, SQLite3",
+    link: "https://gitlab.cas.mcmaster.ca/kallaym/3xa3project",
+    year: "2021",
+  },
   clickerchat: {
     title: "CLICKER CHAT",
     descriptionTitles: [
@@ -21,7 +44,6 @@ export const groupProjectInfo = {
   },
   deltahacksvii: {
     title: "PRESSURE DESTRESSER",
-    subtitle: "DELTAHACKS VII",
     descriptionTitles: [
       "DeltahacksVII",
       "Supports Patients and Doctors",
@@ -40,7 +62,7 @@ export const groupProjectInfo = {
   },
   complain: {
     title: "COMPLAIN",
-    subtitle: "DELTAHACKS VI",
+
     descriptionTitles: [
       "DeltahacksVI",
       "Upload Complaints or Upload Fixes",

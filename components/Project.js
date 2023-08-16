@@ -57,14 +57,9 @@ export default function Project({ project, info }) {
               </div>
             ))}
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12}>
             <Typography variant="h6" className={styles.listInfo}>
-              <strong>Technology Stack</strong>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6} md={8}>
-            <Typography variant="h6" className={styles.listInfo}>
-              {info.tech}
+              <strong>{info.tech}</strong>
             </Typography>
           </Grid>
           <Grid item xs={12}>
