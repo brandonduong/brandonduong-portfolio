@@ -14,8 +14,7 @@ import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import ListItems from "../components/ListItems";
 import CustomTextDivider from "../components/CustomTextDivider";
 import Project from "../components/Project";
-import CustomCarousel from "../components/CustomCarousel";
-
+import { groupProjectInfo } from "../constants/groupProjectInfo";
 export default function Home() {
   const demographicInfo = {
     "Full Name": "Brandon Duong",
@@ -32,27 +31,6 @@ export default function Home() {
     "Frameworks & Libraries":
       "AWS (Amplify, AppSync, Lambda, Cognito, API Gateway), GraphQL, Azure, React.js, Vue.js, Node.js, Express, Redux, Django, Bootstrap, Git/Github, Docker, JUnit, Pytest, Cypress",
     Databases: "Firebase, SQLite3, MySQL, Redis, MongoDB",
-  };
-
-  const groupProjectInfo = {
-    COMPLAIN: {
-      subtitle: "DELTAHACKS VI",
-      descriptionTitles: [
-        "DeltahacksVI",
-        "Upload Complaints or Upload Fixes",
-        "Litter Example",
-        "Complete Complaint Map",
-      ],
-      description: [
-        "A webapp where users can vent about their everyday life and surroundings, and view other locals' reportings.",
-        "Users first upload a picture and description of their complaint. Then others can update what has been done about it.",
-        "Looks like a user is complaining about litter in their area! In the future, someone can update on the litter situation.",
-        "Using Bing's mapping API, all complaints are displayed on the map for all to see.",
-      ],
-      tech: "Javascript, HTML, CSS, Firebase",
-      link: "https://github.com/EngandDeveloper/deltahacks6",
-      year: "2020",
-    },
   };
 
   const linkButtonsInfo = {
@@ -191,7 +169,19 @@ export default function Home() {
 
       <CustomTextDivider text={"Group Projects"} />
       {Object.entries(groupProjectInfo).map(([project, info]) => {
-        return <Project project={project} info={info} />;
+        return (
+          <>
+            <Project project={project} info={info} />
+            <Divider
+              sx={{
+                borderBottomWidth: 1,
+                borderStyle: "dashed",
+                borderColor: "#000000",
+                margin: "0.875rem 0",
+              }}
+            />
+          </>
+        );
       })}
     </Layout>
   );

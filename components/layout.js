@@ -64,6 +64,14 @@ export default function Layout({ children }) {
         html {
           font-size: 83.333333%;
         }
+
+        body {
+          background-image: url(/background.svg);
+          background-size: 88px;
+          background-position: center;
+          background-repeat: repeat;
+          background-blend-mode: luminosity;
+        }
       `}</style>
     </Container>
   );

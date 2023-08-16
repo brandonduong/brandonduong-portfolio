@@ -20,7 +20,7 @@ export default function Project({ project, info }) {
           <Grid item xs={8}>
             <Typography variant="h5">
               <strong>
-                {project} - {info.subtitle}
+                {info.title} {info.subtitle && <>- {info.subtitle}</>}
               </strong>
             </Typography>
           </Grid>
