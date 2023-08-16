@@ -26,15 +26,121 @@
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid black;
-  padding: 1rem;
+  padding: 0.75rem;
   object-fit: cover;
 }
 
-.demograpicInfo {
+.listInfo {
   font-size: 1.1rem;
 }
 
 .buttonIcon {
   font-size: 1.5rem;
   margin-right: 0.25rem;
+}
+
+.projectImg {
+  width: 90%;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.slideshowContainer {
+  position: relative;
+  margin: auto;
+  width: 90%;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  display: flex;
+}
+
+.centerCropped {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.chevron {
+  padding: 0.05rem;
+  font-size: 2rem;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.text {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  filter: opacity(0.8);
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  display: flex;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

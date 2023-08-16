@@ -6,12 +6,12 @@ export default function ListItems({ infoObj }) {
     return (
       <>
         <Grid item xs={12} sm={6} md={4}>
-          <Typography variant="p" className={styles.demograpicInfo}>
+          <Typography variant="p" className={styles.listInfo}>
             <strong>{row}</strong>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={8}>
-          <Typography variant="p" className={styles.demograpicInfo}>
+          <Typography variant="p" className={styles.listInfo}>
             {info}
           </Typography>
         </Grid>

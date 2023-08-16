@@ -13,6 +13,8 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import ListItems from "../components/ListItems";
 import CustomTextDivider from "../components/CustomTextDivider";
+import Project from "../components/Project";
+import CustomCarousel from "../components/CustomCarousel";
 
 export default function Home() {
   const demographicInfo = {
@@ -30,6 +32,27 @@ export default function Home() {
     "Frameworks & Libraries":
       "AWS (Amplify, AppSync, Lambda, Cognito, API Gateway), GraphQL, Azure, React.js, Vue.js, Node.js, Express, Redux, Django, Bootstrap, Git/Github, Docker, JUnit, Pytest, Cypress",
     Databases: "Firebase, SQLite3, MySQL, Redis, MongoDB",
+  };
+
+  const groupProjectInfo = {
+    COMPLAIN: {
+      subtitle: "DELTAHACKS VI",
+      descriptionTitles: [
+        "DeltahacksVI",
+        "Upload Complaints or Upload Fixes",
+        "Litter Example",
+        "Complete Complaint Map",
+      ],
+      description: [
+        "A webapp where users can vent about their everyday life and surroundings, and view other locals' reportings.",
+        "Users first upload a picture and description of their complaint. Then others can update what has been done about it.",
+        "Looks like a user is complaining about litter in their area! In the future, someone can update on the litter situation.",
+        "Using Bing's mapping API, all complaints are displayed on the map for all to see.",
+      ],
+      tech: "Javascript, HTML, CSS, Firebase",
+      link: "https://github.com/EngandDeveloper/deltahacks6",
+      year: "2020",
+    },
   };
 
   const linkButtonsInfo = {
@@ -112,19 +135,22 @@ export default function Home() {
           <strong>CLASSIFIED</strong>
         </p>
       </Stack>
-
       <Grid container spacing={2}>
-        <Grid item md={6}>
-          <Typography variant="h6">IDENTIFICATION PHOTOGRAPH</Typography>
-          <Divider
-            sx={{
-              borderBottomWidth: 3,
-              borderColor: "#000000",
-              marginBottom: "0.875rem",
-            }}
-          />
+        <Grid item md={6} container>
+          <Grid item xs={12}>
+            <Typography variant="h6">IDENTIFICATION PHOTOGRAPH</Typography>
 
-          <img alt="me" src="/me.jpg" className={styles.me} />
+            <Divider
+              sx={{
+                borderBottomWidth: 3,
+                borderColor: "#000000",
+                marginBottom: "0.875rem",
+              }}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <img alt="me" src="/me.jpg" className={styles.me} />
+          </Grid>
         </Grid>
         <Grid item md={6}>
           <Typography variant="h6">DEMOGRAPHIC INFORMATION</Typography>
@@ -151,7 +177,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Grid>
-
       <Divider
         sx={{
           borderBottomWidth: 3,
@@ -159,12 +184,15 @@ export default function Home() {
           margin: "0.875rem 0",
         }}
       />
-
       <Grid container columnSpacing={0.25} paddingBottom={0.5}>
         {linkButtons}
       </Grid>
-
       <CustomTextDivider text={"Personal Projects"} />
+
+      <CustomTextDivider text={"Group Projects"} />
+      {Object.entries(groupProjectInfo).map(([project, info]) => {
+        return <Project project={project} info={info} />;
+      })}
     </Layout>
   );
 }
