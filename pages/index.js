@@ -23,7 +23,7 @@ export default function Home() {
     "Full Name": "Brandon Duong",
     Birthday: "October 14",
     Personality:
-      "Fast Learner, Team Player, Attention to Detail, Takes Initiative, Passionate, Self-Motivated",
+      "Results Oriented, Fast Learner, Team Player, Attention to Detail, Takes Initiative, Passionate, Self-Motivated",
     "Other Info":
       "Genuinely love to create and be creative, evident in the plethora of personal projects and learning endeavors I've completed!",
   };

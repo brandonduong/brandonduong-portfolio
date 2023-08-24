@@ -18,9 +18,9 @@ export const groupProjectInfo = {
       "The psychological study also investigates how people weigh risk vs reward, along with how their perception of this changes in response to the type of data they receive. This study question is analyzed through the game mechanic of insurance.",
       "The player can pay a small premium to insure a base selling price for their planted crops. If the consultant predicts bad weather or falling sale prices, will the study participant purchase insurance? And at what premium are they wiling to pay to ensure some base selling price?",
     ],
-    tech: "Python (Django), HTML, CSS, SQLite3",
-    link: "https://gitlab.cas.mcmaster.ca/kallaym/3xa3project",
-    year: "2021",
+    tech: "Javascript (React), Three.Js, Express.Js, Node.Js, HTML, CSS, SQLite3",
+    link: "https://github.com/brandonduong/Farming-Matters",
+    year: "2022/2023",
   },
   clickerchat: {
     title: "CLICKER CHAT",
