@@ -1,4 +1,30 @@
 export const personalProjectInfo = {
+  nayoryay: {
+    title: "NAY OR YAY",
+    descriptionTitles: [
+      "Social Media Webapp",
+      "Category List",
+      "Question/Statement List",
+      "Question/Statement",
+      "Votes",
+      "Add Category",
+      "Add Question",
+      "Profile",
+    ],
+    description: [
+      "Users can browse controversial questions/statements and vote on whether they disagree (Nay) or agree (Yay).",
+      "Categories include the Nay or Yay daily questions, or questions created by the community. Community categories are self-regulating such that the most popular are shown first.",
+      "Each category has their own list of questions that were either created by Nay or Yay, or by the community. Signed in users can see their answer to each question.",
+      "Signed in users can vote Nay or Yay depending on their opinion.",
+      "Each question stores who voted which option and displays the results.",
+      "Any user can create a category as long as the name is unique.",
+      "Any user can create a question within any category.",
+      "Users can share their profile with others to show off their votes, organized by category.",
+    ],
+    tech: "Javascript (React), Express.Js, Node.Js, HTML, CSS, PostgreSQL, AWS (Elastic Beanstalk, EC2, RDS, Cognito)",
+    link: "https://github.com/brandonduong/NayorYay",
+    year: "2023",
+  },
   recursion: {
     title: "BRANDONDUONG.VERCEL.APP",
     descriptionTitles: ["Fully Responsive and Beautifully Themed Portfolio"],
