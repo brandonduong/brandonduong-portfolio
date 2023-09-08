@@ -24,16 +24,19 @@ export default function Home() {
     Birthday: "October 14",
     Personality:
       "Results Oriented, Fast Learner, Team Player, Attention to Detail, Takes Initiative, Passionate, Self-Motivated",
-    "Other Info":
-      "Genuinely love to create and be creative, evident in the plethora of personal projects and learning endeavors I've completed!",
+    "Other Info": "Genuinely love to create and be creative!",
   };
 
   const skillsInfo = {
-    "Programming Languages":
-      "Python, Java, JavaScript, TypeScript, Kotlin, HTML5, CSS3, SQL, C#, C, R, Go",
-    "Frameworks & Libraries":
-      "AWS (Amplify, AppSync, Lambda, Cognito, API Gateway), GraphQL, Azure, React.js, Vue.js, Node.js, Express, Redux, Django, Bootstrap, Git/Github, Docker, JUnit, Pytest, Cypress",
-    Databases: "Firebase, SQLite3, MySQL, Redis, MongoDB",
+    Languages:
+      "JavaScript, TypeScript, HTML5, CSS3, GraphQL, SQL, Python3, Java, Kotlin, C#, C, R, Go",
+    "Developer Tools":
+      "Git/Github, Postman, VSCode, Figma, Zeplin, Latex, Jira, Docker, Android Studio, Unity, Azure, JUnit, Pytest",
+    "Front-end":
+      "React.js, Vue.js, Next.js, Redux, Django, Cypress, Bootstrap, Material UI, Ant Design",
+    "Back-end":
+      "Node.js, Express.js, AWS (Amplify, AppSync, Lambda, Cognito, API Gateway, EB, EC2, RDS)",
+    Databases: "PostgreSQL, MySQL, MongoDB, SQLite3, Firebase",
   };
 
   const linkButtonsInfo = {

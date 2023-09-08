@@ -43,7 +43,10 @@ export default function CustomCarousel({
         {info.description.map((desc, index) => (
           <div
             class={styles.fade}
-            style={{ display: slide === index ? "" : "none" }}
+            style={{
+              display: slide === index ? "" : "none",
+              justifyContent: "center",
+            }}
           >
             {info.picTypes && info.picTypes[index] !== ".png" ? (
               <video controls class={styles.centerCropped}>
