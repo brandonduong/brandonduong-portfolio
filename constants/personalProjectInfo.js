@@ -1,4 +1,27 @@
 export const personalProjectInfo = {
+  wacos: {
+    title: "WacOS",
+    descriptionTitles: [
+      "Operating System Simulator",
+      "Customizable Desktop",
+      "Identical Experience",
+      "Job Search",
+      "Application Status",
+      "Support Network",
+    ],
+    picTypes: [".png", ".mp4", ".mp4", ".mp4", ".mp4", ".mp4"],
+    description: [
+      "Fake operating system with familiar login, desktop icons, window behaviour, and taskbar.",
+      "Icons and apps are draggable and snap to grid.",
+      "Apps open in windows and can be dragged, minimized, maximized, closed, and overlap on focus.",
+      "Use energy to browse the internet for job postings and submitting applications.",
+      "End the day to receive emails about your application updates.",
+      "Randomly receive messages of support to help continue the grind.",
+    ],
+    tech: "Typescript (React - Next.js), HTML, TailwindCSS, Firebase, Chart.js, Framer Motion",
+    link: "https://github.com/brandonduong/WacOS",
+    year: "2023",
+  },
   nayoryay: {
     title: "NAY OR YAY",
     descriptionTitles: [
@@ -21,7 +44,7 @@ export const personalProjectInfo = {
       "Any user can create a question within any category.",
       "Users can share their profile with others to show off their votes, organized by category.",
     ],
-    tech: "Javascript (React), Express.Js, Node.Js, HTML, CSS, PostgreSQL, AWS (Elastic Beanstalk, EC2, RDS, Cognito)",
+    tech: "Javascript (React - Next.js), Express.Js, Node.Js, HTML, CSS, PostgreSQL, AWS (Elastic Beanstalk, EC2, RDS, Cognito)",
     link: "https://github.com/brandonduong/NayorYay",
     year: "2023",
   },
