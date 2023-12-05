@@ -33,7 +33,7 @@ export default function Home() {
     "Developer Tools":
       "Git/Github, Postman, VSCode, Figma, Zeplin, Latex, Jira, Docker, Android Studio, Unity, Azure, JUnit, Pytest",
     "Front-end":
-      "React.js, Vue.js, Next.js, Redux, Django, Cypress, Bootstrap, Material UI, Ant Design",
+      "React.js, Vue.js, Angular, Next.js, Redux, Django, Cypress, Bootstrap, Material UI, Ant Design, TailwindCSS",
     "Back-end":
       "Node.js, Express.js, AWS (Amplify, AppSync, Lambda, Cognito, API Gateway, EB, EC2, RDS)",
     Databases: "PostgreSQL, MySQL, MongoDB, SQLite3, Firebase",

@@ -1,4 +1,15 @@
 export const personalProjectInfo = {
+  lolchest: {
+    title: "LoLChest",
+    descriptionTitles: ["Teamfight Tactics Competitive Tool"],
+    picTypes: [".png"],
+    description: [
+      "With 50,000 views on Reddit, users use this tool to track their ingame item drop history and item drop rates.",
+    ],
+    tech: "Typescript (Angular), HTML, CSS, TailwindCSS, Azure, ASP.NET, C#",
+    link: "https://github.com/brandonduong/LoLChest",
+    year: "2023",
+  },
   wacos: {
     title: "WacOS",
     descriptionTitles: [
@@ -11,7 +22,7 @@ export const personalProjectInfo = {
     ],
     picTypes: [".png", ".mp4", ".mp4", ".mp4", ".mp4", ".mp4"],
     description: [
-      "Fake operating system with familiar login, desktop icons, window behaviour, and taskbar.",
+      "Garnering 3500 views and 100 upvotes on Reddit, WacOS replicates the fake operating system in popular video game Needy Streamer Overload with familiar login, desktop icons, window behaviour, and taskbar.",
       "Icons and apps are draggable and snap to grid.",
       "Apps open in windows and can be dragged, minimized, maximized, closed, and overlap on focus.",
       "Use energy to browse the internet for job postings and submitting applications.",
@@ -71,7 +82,7 @@ export const personalProjectInfo = {
       "Supporters Page",
     ],
     description: [
-      "By using this tool, competitive and casual players can train and test their overall game knowledge to improve their ingame play.",
+      "With 85,000 views on Reddit, and over 5000 plays in total, competitive and casual players use this tool to train and test their overall game knowledge, improving their ingame play.",
       "Users first choose a set of regions (NA, KR, JP, EU, etc.) to receive a random match from.",
       "Users then choose a set of ranks (Iron, Silver, Gold, Masters, Grandmasters, Challengers, etc.) to receive a random match from.",
       "Users then receive said random match from the possible regions and ranks. Given each player's end-game team composition, users must guess their placings from first to eighth and the overall match rank.",
