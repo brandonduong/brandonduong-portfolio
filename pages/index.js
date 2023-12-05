@@ -1,22 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
-import {
-  Button,
-  Divider,
-  Grid,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Button, Divider, Grid, Stack, Typography } from "@mui/material";
 import DescriptionIcon from "@mui/icons-material/Description";
 import { Email, GitHub, LinkedIn } from "@mui/icons-material";
 import ListItems from "../components/ListItems";
-import CustomTextDivider from "../components/CustomTextDivider";
-import Project from "../components/Project";
-import { groupProjectInfo } from "../constants/groupProjectInfo";
-import { personalProjectInfo } from "../constants/personalProjectInfo";
-import Projects from "../components/Projects";
 import Link from "next/link";
 export default function Home() {
   const demographicInfo = {
@@ -41,7 +29,7 @@ export default function Home() {
 
   const linkButtonsInfo = {
     RESUME: {
-      link: "Brandon_Duong_Resume.pdf",
+      link: "Brandon Duong Resume.docx",
       icon: <DescriptionIcon className={styles.buttonIcon} />,
     },
     GITHUB: {
@@ -62,25 +50,23 @@ export default function Home() {
     <>
       {Object.entries(linkButtonsInfo).map(([text, info]) => {
         return (
-          <>
-            <Grid item xs={6} sm={3} md={3}>
-              <Button
-                variant="contained"
-                color="black"
-                sx={{
-                  fontSize: "0.95rem",
-                  alignItems: "start",
-                  borderRadius: "0.75rem",
-                  width: "100%",
-                }}
-                href={info.link}
-                target="_blank"
-              >
-                {info.icon}
-                {text}
-              </Button>
-            </Grid>
-          </>
+          <Grid item xs={6} sm={3} md={3} key={text}>
+            <Button
+              variant="contained"
+              color="black"
+              sx={{
+                fontSize: "0.95rem",
+                alignItems: "start",
+                borderRadius: "0.75rem",
+                width: "100%",
+              }}
+              href={info.link}
+              target="_blank"
+            >
+              {info.icon}
+              {text}
+            </Button>
+          </Grid>
         );
       })}
     </>

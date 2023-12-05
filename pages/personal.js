@@ -17,7 +17,7 @@ export default function Personal() {
         <p>BEST VIEWED ON BROWSER</p>
         <Stack textAlign={"end"} rowGap={1}>
           <p style={{ marginBottom: 0 }}>
-            <strong>UPDATED:</strong> 08/15/2023
+            <strong>UPDATED:</strong> 12/05/2023
           </p>
           <Typography variant="p" className={`${styles.header}`}>
             <Link href="/" style={{ color: "black" }}>
