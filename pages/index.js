@@ -29,7 +29,7 @@ export default function Home() {
 
   const linkButtonsInfo = {
     RESUME: {
-      link: "Brandon Duong Resume.docx",
+      link: "Brandon Duong.pdf",
       icon: <DescriptionIcon className={styles.buttonIcon} />,
     },
     GITHUB: {
