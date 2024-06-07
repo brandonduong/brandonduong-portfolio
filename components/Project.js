@@ -33,8 +33,9 @@ export default function Project({ project, info, category }) {
           <Grid item xs={12}>
             {info.descriptionTitles.map((dtitle, index) => (
               <div
-                class={styles.fade}
-                style={{ display: slide === index ? "" : "none" }}
+                className={styles.fade}
+                style={{ display: slide === index ? "flex" : "none" }}
+                key={`${dtitle}`}
               >
                 <Typography
                   variant="p"
@@ -50,8 +51,9 @@ export default function Project({ project, info, category }) {
           <Grid item xs={12}>
             {info.description.map((desc, index) => (
               <div
-                class={styles.fade}
-                style={{ display: slide === index ? "" : "none" }}
+                className={styles.fade}
+                style={{ display: slide === index ? "flex" : "none" }}
+                key={desc}
               >
                 <Typography
                   variant="p"

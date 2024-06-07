@@ -6,8 +6,9 @@ export default function Projects({ projectInfo, category }) {
     <>
       {Object.entries(projectInfo).map(([project, info], index) => {
         return (
-          <>
+          <div key={project}>
             <Project project={project} info={info} category={category} />
+
             {index < Object.entries(projectInfo).length - 1 && (
               <Divider
                 sx={{
@@ -18,7 +19,7 @@ export default function Projects({ projectInfo, category }) {
                 }}
               />
             )}
-          </>
+          </div>
         );
       })}
     </>

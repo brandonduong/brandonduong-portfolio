@@ -20,7 +20,7 @@ export const groupProjectInfo = {
     ],
     tech: "Javascript (React), Three.Js, Express.Js, Node.Js, HTML, CSS, SQLite3",
     link: "https://github.com/brandonduong/Farming-Matters",
-    year: "2022/2023",
+    year: "2022 - 2023",
   },
   clickerchat: {
     title: "CLICKER CHAT",

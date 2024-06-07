@@ -26,12 +26,15 @@ export default function CustomCarousel({
   }
 
   const dots = (
-    <div style={{ textAlign: "center" }} class={styles.dots}>
+    <div style={{ textAlign: "center" }} className={styles.dots}>
       {info.description.map((desc, index) => (
         <span
-          class={styles.dot}
+          className={styles.dot}
           onClick={() => setSlide(index)}
-          style={{ backgroundColor: slide === index ? "black" : "" }}
+          style={{
+            backgroundColor: slide === index ? "black" : "gray",
+          }}
+          key={desc}
         ></span>
       ))}
     </div>
@@ -39,17 +42,18 @@ export default function CustomCarousel({
 
   return (
     <>
-      <div class={styles.slideshowContainer}>
+      <div className={styles.slideshowContainer}>
         {info.description.map((desc, index) => (
           <div
-            class={styles.fade}
+            className={styles.fade}
             style={{
-              display: slide === index ? "" : "none",
+              display: slide === index ? "flex" : "none",
               justifyContent: "center",
             }}
+            key={`${project}-${index}`}
           >
             {info.picTypes && info.picTypes[index] !== ".png" ? (
-              <video controls class={styles.centerCropped}>
+              <video controls className={styles.centerCropped}>
                 <source
                   src={`/${category}/${project}/${project}${index + 1}${
                     info.picTypes[index]
@@ -66,7 +70,7 @@ export default function CustomCarousel({
               >
                 <img
                   src={`/${category}/${project}/${project}${index + 1}.png`}
-                  class={styles.centerCropped}
+                  className={styles.centerCropped}
                 />
               </a>
             )}
@@ -75,10 +79,10 @@ export default function CustomCarousel({
         {info.description.length > 1 && (
           <>
             {dots}
-            <a class={styles.prev} onClick={handlePrev}>
+            <a className={styles.prev} onClick={handlePrev}>
               <ChevronLeft className={styles.chevron} />
             </a>
-            <a class={styles.next} onClick={handleNext}>
+            <a className={styles.next} onClick={handleNext}>
               <ChevronRight className={styles.chevron} />
             </a>
           </>

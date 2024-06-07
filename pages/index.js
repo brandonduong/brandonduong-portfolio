@@ -81,7 +81,7 @@ export default function Home() {
       >
         <p>BEST VIEWED ON BROWSER</p>
         <p>
-          <strong>UPDATED:</strong> 12/05/2023
+          <strong>UPDATED:</strong> 06/07/2024
         </p>
       </Stack>
       <Typography variant="h4" className={styles.title} gutterBottom>
