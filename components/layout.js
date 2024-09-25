@@ -1,6 +1,8 @@
 import { Container, ThemeProvider, createTheme } from "@mui/material";
 import styles from "../styles/layout.module.css";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export default function Layout({ children }) {
   let theme = createTheme({
     typography: {
@@ -48,6 +50,8 @@ export default function Layout({ children }) {
         <div className={styles.main}>
           <div className={styles.inner}>{children}</div>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
 
       <style jsx>{`
